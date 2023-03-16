@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CD - Colors</title>
+		<link rel="stylesheet" href="jquery-ui.min.css">
+		<style>
+			#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+			#sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+			#sortable li span { position: absolute; margin-left: -1.3em; }
+			#sortable2 { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+			#sortable2 li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+			#sortable2 li span { position: absolute; margin-left: -1.3em; }
+      li { font-family: monospace; }
+		</style>
+		<script src="scripts/jquery.js"></script>
+		<script src="scripts/jquery-ui.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$('#sortable').sortable();
+				$('#sortable').disableSelection();
+        $('#sortable2').sortable();
+				$('#sortable2').disableSelection();
+        
+			});
+		</script>
+	</head>
+	<body class="corporateColors">
+		<h1>Corporate Design - Mögliche Farben</h1>
+		<h2>Favoriten</h2>
+		<ul id="sortable2" class="ui-sortable">
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(27, 159, 196); color:#333333;">#1B9FC4 rgb(&nbsp;27, 159, 196)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(17, 43, 120); color:#BFBFBF;">#112B78 rgb(&nbsp;17, &nbsp;43, 120)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(128, 3, 0); color:#BFBFBF;">#800300 rgb(128, &nbsp;&nbsp;3, &nbsp;&nbsp;0)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(196, 53, 18); color:#BFBFBF;">#C43512 rgb(196, &nbsp;53, &nbsp;18)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(247, 133, 22); color:#333333;">#F78516 rgb(247, 133, &nbsp;22)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(196, 186, 57); color:#333333;">#C4BA39 rgb(196, 186, &nbsp;57)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(57, 196, 72); color:#333333;">#39C448 rgb(&nbsp;57, 196, &nbsp;72)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(35, 120, 44); color:#BFBFBF;">#23782C rgb(&nbsp;35, 120, &nbsp;44)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(94, 75, 56); color:#BFBFBF;">#5E4B38 rgb(&nbsp;94, &nbsp;75, &nbsp;56)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(51, 51, 51); color:#BFBFBF;">#333333 rgb(&nbsp;51, &nbsp;51, &nbsp;51)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(128, 128, 128); color:#333333;">#808080 rgb(128, 128, 128)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(191, 191, 191); color:#333333;">#BFBFBF rgb(191, 191, 191)</li>
+		</ul>
+		<h2>Weitere Auswahl</h2>
+		<ul id="sortable" class="ui-sortable">
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(196, 27, 81); color:#BFBFBF;">#C41B51 rgb(196, &nbsp;27, &nbsp;81)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(75, 27, 196); color:#BFBFBF;">#4B1BC4 rgb(&nbsp;75, &nbsp;27, 196)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(18, 63, 196); color:#BFBFBF;">#123FC4 rgb(&nbsp;18, &nbsp;63, 196)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(18, 157, 196); color:#333333;">#129DC4 rgb(&nbsp;18, 157, 196)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(11, 96, 120); color:#BFBFBF;">#0B6078 rgb(&nbsp;11, &nbsp;96, 120)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(0, 120, 80); color:#BFBFBF;">#007850 rgb(&nbsp;&nbsp;0, 120, &nbsp;80)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(22, 247, 46); color:#333333;">#16F72E rgb(&nbsp;22, 247, &nbsp;46)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(47, 196, 63); color:#333333;">#2FC43F rgb(&nbsp;47, 196, &nbsp;63)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(37, 196, 144); color:#333333;">#25C490 rgb(&nbsp;37, 196, 144)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(18, 196, 138); color:#333333;">#12C48A rgb(&nbsp;18, 196, 138)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(90, 204, 134); color:#333333;">#5ACC86 rgb(&nbsp;90, 204, 134)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(136, 196, 57); color:#333333;">#88C439 rgb(136, 196, &nbsp;57)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(196, 120, 47); color:#333333;">#C4782F rgb(196, 120, &nbsp;47)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(206, 122, 101); color:#333333;">#CE7A65 rgb(206, 122, 101)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(255, 110, 74); color:#333333;">#FF6E4A rgb(255, 110, &nbsp;74)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(209, 74, 40); color:#333333;">#D14A28 rgb(209, &nbsp;74, &nbsp;40)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(196, 69, 37); color:#333333;">#C44525 rgb(196, &nbsp;69, &nbsp;37)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(171, 60, 32); color:#BFBFBF;">#AB3C20 rgb(171, &nbsp;60, &nbsp;32)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(145, 51, 28); color:#BFBFBF;">#91331C rgb(145, &nbsp;51, &nbsp;28)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(133, 47, 25); color:#BFBFBF;">#852F19 rgb(133, &nbsp;47, &nbsp;25)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(120, 33, 11); color:#BFBFBF;">#78210B rgb(120, &nbsp;33, &nbsp;11)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(69, 24, 13); color:#BFBFBF;">#45180D rgb(&nbsp;69, &nbsp;24, &nbsp;13)</li>
+			<li class="ui-state-default ui-sortable-handle" style="background-color: rgb(69, 41, 34); color:#BFBFBF;">#452922 rgb(&nbsp;69, &nbsp;41, &nbsp;34)</li>
+		</ul>
+	</body>
+</html>

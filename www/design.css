@@ -1,0 +1,1007 @@
+@charset "utf-8";
+/*
+==================================================
+==================================================
+	CSS-RESET
+--------------------------------------------------
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	border: 0;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*
+==================================================
+==================================================
+	Übersicht CSS-Strukturierung
+--------------------------------------------------
+	1 BODY (Allgemeine Seitenstruktur)
+		=> auf allen Seiten benötigt, zum Grundgerüst der Seite gehörend
+	2 HEADER
+		2.1 BANNER
+		2.2 HAUPTNAVIGATION
+			2.2.1 BUTTONBAR
+			2.2.2 AKTUELLE POSITION
+	3 MAIN
+		3.0 REDAKTIONELLES
+			3.0.1 ABOUT
+			3.0.2 IMPRESSUM
+			3.0.3 AGB
+		3.1 NEWS
+		3.2 LEHRBUCH
+		3.3 SPOTS
+		3.4 LITERATUR (Übersicht)
+			3.4.1 LITERATUR-Detail
+		3.5 LINKS
+		3.6 COMMUNITY (innerhalb von MAIN)
+			3.6.1 Registrierung
+			3.6.2 Meine Startseite
+			3.6.3 Persönliche Daten
+			3.6.4 Einstellungen
+			3.6.5 Passwort vergessen
+			3.6.6 "nach Logout"
+	4 ASIDE
+		4.1 COMMUNITY (innerhalb von ASIDE)
+			4.1.1 LOGIN
+			4.1.2 MENÜ
+		4.2 WERBUNG
+			4.2.1 KINDERNOTHILFE
+			4.2.2 OUTDOOR-CLIMBING.DE
+			4.2.3 GOOGLE ADSENSE
+	5 FOOTER
+		5.1 FUSSNAVIGATION
+--------------------------------------------------
+*/
+/*
+==================================================
+==================================================
+	1 BODY (Allgemeine Seitenstruktur)
+		=> auf allen Seiten benötigt, zum Grundgerüst der Seite gehörend
+--------------------------------------------------
+*/
+body {
+	margin:0 auto;
+	padding:0 25px 25px 25px;
+	font-size:14px;
+	font-family:Verdana, Arial, sans serif;
+	line-height:17px;
+	width:950px;
+}
+a {
+	color:rgb(197,68,37);
+	text-decoration:none;
+	white-space:normal;
+}
+b {
+	font-weight:bold;
+}
+/* <h1> und <h2> werden nur benutzt um das gewünschte Outline zu erzeugen => https://gsnedders.html5.org/outliner/ */
+h1, h2 {
+	visibility:hidden;
+	line-height:0;
+	font-size:0;
+}
+/*
+==================================================
+==================================================
+	2 HEADER
+--------------------------------------------------
+*/
+/*
+==================================================
+==================================================
+	2 HEADER
+		2.1 BANNER
+--------------------------------------------------
+*/
+a.k2-1_banner {
+	font-size:0;
+	line-height:0;
+}
+img.k2-1_banner {
+	margin:20px 0 13px 0;
+}
+/*
+==================================================
+==================================================
+	2 HEADER
+		2.2 HAUPTNAVIGATION
+--------------------------------------------------
+*/
+/*
+==================================================
+==================================================
+	2 HEADER
+		2.2 HAUPTNAVIGATION
+			2.2.1 BUTTONBAR
+--------------------------------------------------
+*/
+ul.k2-2-1 {
+	background-color:rgb(220,220,220);
+	box-shadow:2px 2px 2px rgb(160,160,160);
+}
+ul.k2-2-1:after {
+	content:"";
+	font-size:0;
+	line-height:0;
+	visibility:hidden;
+	display:block;
+	clear:both;
+}
+/* Hauptbuttons */
+ul.k2-2-1 li {
+	background-color:rgb(220,220,220);
+	border-right:1px solid rgb(160,160,160);
+	min-width:100px;
+	float:left;
+	list-style:none;
+}
+ul.k2-2-1 li a {
+	padding:10px 20px 10px 20px;
+	text-align:left;
+	display:block;
+	transition:background 0.2s ease-out 0s;
+}
+ul.k2-2-1 li:hover a {
+	color:rgb(240,240,240);
+	background-color:rgb(197,68,37);
+}
+	/*
+	Letzten Button der oberen Navigationsleiste Rechtsbündig ausrichten:
+	ul.k2-2-1 li.k2-2-1_buttonright {
+		border-right:0;
+		float:right;
+		position:relative;
+	}
+	*/
+/* Subbuttons */
+ul.k2-2-1_subbuttons {
+	visibility:hidden;
+	position:absolute;
+	box-shadow:2px 2px 2px rgb(160,160,160);
+}
+li:hover ul.k2-2-1_subbuttons {
+	padding-top:3px;
+	visibility:visible;
+}
+ul.k2-2-1_subbuttons li {
+	border:0px none transparent;
+	float:none;
+}
+ul.k2-2-1_subbuttons li a {
+	color:rgb(240,240,240);
+}
+ul.k2-2-1_subbuttons li a:hover {
+	color:rgb(197,68,37);
+	background-color:rgb(220,220,220);
+}
+/*
+==================================================
+==================================================
+	2 HEADER
+		2.2 HAUPTNAVIGATION
+			2.2.2 AKTUELLE POSITION
+--------------------------------------------------
+*/
+p.k2-2-2 {
+	margin:13px 0 5px 19px;
+	color:rgb(120,120,120);
+	font-size:12px;
+	line-height:14px;
+}
+p.k2-2-2 a {
+	color:rgb(197,68,37);
+}
+p.k2-2-2 a:hover {
+	text-decoration:underline;
+}
+/*
+==================================================
+==================================================
+	3 MAIN
+--------------------------------------------------
+*/
+main {
+	width:680px;
+	float:left;
+}
+main article {
+	margin:20px 0px 40px 0px;
+}
+main h3 {
+	margin-top:-6px;
+	padding:0px 12px 6px 12px;
+	font-weight:bold;
+	font-size:26px;
+	line-height:26px;
+	max-width:520px;
+}
+main h4 {
+	margin:20px 12px 5px 12px;
+	padding:0;
+	font-weight:bold;
+	font-size:18px;
+	line-height:22px;
+	border-bottom:rgb(197,68,37) solid 2px;
+}
+main h5 {
+	margin:0 12px 0 12px;
+	padding:15px 0 0 0;
+	font-weight:bold;
+}
+main form {
+	margin:0 0 14px 0;
+}
+main form fieldset {
+	margin:0 0 14px 0;
+	padding:10px;
+	border:rgb(200,200,200) solid 2px;
+	border-radius:3px;
+}
+main form fieldset h3 {
+	padding:0px 0px 14px 0px;
+}
+main form label {
+	margin-top:5px;
+	font-weight:bold;
+	font-size:18px;
+	line-height:22px;
+}
+main form input {
+	margin:3px 0 3px 0;
+}
+main form input.button {
+	margin:2px 0 2px 0;
+	padding:3px 15px 3px 15px;
+	color:rgb(197,68,37);
+	font-size:16px;
+	font-weight:bold;
+	background-color:rgb(220,220,220);
+	border:rgb(160,160,160) solid 1px;
+	border-radius:5px;
+	box-shadow:1px 2px 2px rgb(180,180,180);
+}
+main form input.button:hover {
+	color:rgb(240,240,240);
+	background-color:rgb(197,68,37);
+	border:rgb(120,120,120) solid 1px;
+}
+main form input.checkbox {
+	margin-right:15px;
+	float:left;
+}
+main form textarea {
+	margin:7px 0 14px 0;
+	width:650px;
+	height:150px;
+	resize:none;
+}
+main p.innerform {
+	margin:5px 0 14px 0;
+}
+main p.datum {
+	margin:0;
+	padding:2px 12px 0 0;
+	font-style:italic;
+	text-align:right;
+	border-top:rgb(197,68,37) solid 3px;
+}
+main p.intro {
+	margin:14px 12px 14px 12px;
+	font-weight:bold;
+	text-align:left;
+}
+main p.text {
+	margin:14px 12px 14px 12px;
+	text-align:justify;
+}
+main p.by {
+	margin:20px 12px 14px 12px;
+	color:rgb(120,120,120);
+	font-style:italic;
+	font-weight:bold;
+	font-family:Georgia, Times New Roman, serif;
+	text-align:right;
+}
+main a.blocklink {
+	padding:10px 12px 0px 12px;
+	display:block;
+}
+main a.inlinelink:active, a.inlinelink:hover, a.inlinelink:focus, a.blocklink:active, a.blocklink:hover, a.blocklink:focus {
+	text-decoration:underline;
+}
+main img.faviconinline {
+	padding:0px 6px 2px 3px;
+	vertical-align:middle;
+}
+/*
+==================================================
+==================================================
+	3 MAIN
+		3.0 REDAKTIONELLES
+--------------------------------------------------
+*/
+/*
+==================================================
+==================================================
+	3 MAIN
+		3.0 REDAKTIONELLES
+			3.0.1 ABOUT
+--------------------------------------------------
+*/
+ul.k3-0-1_community {
+	margin:0px 12px 14px 12px;
+	padding-left:30px;
+	list-style:disc outside;
+}
+/*
+==================================================
+==================================================
+	3 MAIN
+		3.0 REDAKTIONELLES
+			3.0.2 IMPRESSUM
+--------------------------------------------------
+*/
+/*
+==================================================
+==================================================
+	3 MAIN
+		3.0 REDAKTIONELLES
+			3.0.3 AGB
+--------------------------------------------------
+*/
+/*
+==================================================
+==================================================
+	3 MAIN
+		3.1 NEWS
+--------------------------------------------------
+*/
+/*
+==================================================
+==================================================
+	3 MAIN
+		3.2 LEHRBUCH
+--------------------------------------------------
+*/
+ul.k3-2 {
+	margin:14px 12px 14px 12px;
+	padding-left:20px;
+	color:rgb(160,160,160);
+	font-size:18px;
+	line-height:22px;
+	list-style:none;
+}
+ul.k3-2 li {
+	margin:14px 0 3px 0;
+	padding-left:3px;
+}
+ul.k3-2 ul {
+	padding-left:30px;
+	font-size:14px;
+	line-height:17px;
+}
+ul.k3-2 ul li {
+	margin:0;
+}
+ul.k3-2 a {
+	color:rgb(0,0,0);
+	display:block;
+}
+ul.k3-2 a:hover {
+	background-color:rgb(197,68,37);
+	transition:background 0.2s ease 0s;
+}
+/*
+==================================================
+==================================================
+	3 MAIN
+		3.3 SPOTS
+--------------------------------------------------
+*/
+fieldset.k3-3 {
+	margin:0 0 0 6px;
+	background-color:none;
+	border:0px none transparent;
+}
+fieldset.k3-3 p.innerform {
+	min-width:20%;
+	float:left;
+}
+fieldset.k3-3 input.button {
+	background-color:rgb(230,230,230);
+	font-size:14px;
+	float:right;
+}
+article.k3-3 {
+	margin:10px 0px 10px 0px;
+	padding:1px;
+	border:2px solid rgb(200,200,200);
+	border-radius:3px;
+	float:none;
+	clear:both;
+}
+article.k3-3 p {
+	padding:3px 12px 3px 12px;
+	border-right:2px solid rgb(200,200,200);
+	float:left;
+}
+article.k3-3 img {
+	padding:1px 6px 1px 6px;
+	border-right:2px solid rgb(200,200,200);
+	float:left;
+	height:21px;
+	width:30px;
+}
+article.k3-3 img.k3-3_1i {
+	object-fit:contain;
+}
+article.k3-3 img.k3-3_1o {
+	object-fit:cover;
+}
+article.k3-3 p.k3-3_2 {
+	width:200px;
+}
+article.k3-3 p.k3-3_3 {
+	width:300px;
+}
+article.k3-3 p.k3-3_5 {
+	padding:3px 0px 3px 0px;
+	float:none;
+	background-color:none;
+	border:0px none transparent;
+}
+/*
+==================================================
+==================================================
+	3 MAIN
+		3.3 SPOTS
+			3.3.1 Indoor-Spot-Ansicht
+--------------------------------------------------
+*/
+ul.k3-3-2 {
+	margin:14px 12px 14px 12px;
+	padding-left:30px;
+	list-style:disc outside;
+}
+span.k3-3-2_space {
+	display:inline-block;
+	width:150px;
+}
+ul.k3-3-2 li.nein {
+	color:rgb(180,180,180);
+}
+ul.k3-3-2 li span.ja {
+	color:rgb(0,160,0);
+}
+ul.k3-3-2 li span.nein {
+	color:rgb(255,0,0);
+}
+table.k3-3-2 {
+	margin:14px 12px 14px 27px;
+}
+table.k3-3-2 tr td {
+	padding:0px 5px 0px 5px;
+}
+/*
+==================================================
+==================================================
+	3 MAIN
+		3.3 SPOTS
+			3.3.2 Boulder- und Routenliste
+--------------------------------------------------
+*/
+fieldset.k3-3-2 {
+	margin:0 0 0 6px;
+	background-color:none;
+	border:0px none transparent;
+}
+fieldset.k3-3-2 input.button {
+	background-color:rgb(230,230,230);
+	font-size:14px;
+	float:right;
+}
+img.k3-3-2_2 {
+	margin:0;
+	padding:0;
+	height:35px;
+}
+tr.k3-3-2 td {
+	vertical-align:middle;
+}
+tr.k3-3-2 td div {
+	padding:3px;
+	border-top:2px solid rgb(200,200,200);
+	border-bottom:2px solid rgb(200,200,200);
+	border-right:2px solid rgb(200,200,200);
+	height:35px;
+	text-align:center;
+}
+p.k3-3-2_1 {
+	padding-top:8px;
+	font-size:28px;
+}
+div.k3-3-2_1, div.k3-3-2_6 {
+	border-left:2px solid rgb(200,200,200);
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+div.k3-3-2_5, div.k3-3-2_8 {
+	border-top-right-radius:3px;
+	border-bottom-right-radius:3px;
+}
+div.k3-3-2_7 {
+	color:rgb(255,0,0);
+}
+td.k3-3-2_5 {
+	border-right:5px solid rgb(255,255,255);
+}
+a.k3-3-2 {
+	color:rgb(0,0,0);
+}
+/*
+==================================================
+==================================================
+	3 MAIN
+		3.3 SPOTS
+			3.3.7 Outdoor-Spot-Ansicht
+--------------------------------------------------
+*/
+article.k3-3-7 {
+	float:none;
+	clear:both;
+}
+figure.k3-3-7 {
+	padding:5px 0 14px 30px;
+	float:right;
+	background-color:white;
+}
+img.k3-3-7 {
+	max-width:300px;
+	border:1px solid rgb(220,220,220);
+	border-radius:3px;
+}
+figcaption.k3-3-7 {
+	color:rgb(120,120,120);
+	font-family:Georgia, Times New Roman, serif;
+	text-align:right;
+}
+p.k3-3-7_koords {
+	margin:14px 12px 14px 12px;
+	font-style:italic;
+}
+/*
+==================================================
+==================================================
+	3 MAIN
+		3.4 LITERATUR
+--------------------------------------------------
+*/
+a.k3-4 {
+	white-space:normal;
+}
+article.k3-4 {
+	margin:20px 0px 40px 0px;
+	padding:0 12px 6px 12px;
+	border:2px solid rgb(200,200,200);
+	border-radius:3px;
+}
+fieldset.k3-4 {
+	margin:0 0 0 6px;
+	background-color:none;
+	border:0px none transparent;
+}
+fieldset.k3-4 h4 {
+	margin:0 0 12px 0;
+}
+fieldset.k3-4 p.innerform {
+	width:25%;
+	float:left;
+}
+fieldset.k3-4 input.button {
+	background-color:rgb(230,230,230);
+	font-size:14px;
+	float:right;
+}
+p.k3-4_kategorie {
+	margin:6px 0 -12px 0;
+	color:rgb(140,140,140);
+	font-family:Georgia, Times New Roman, serif;
+	text-align:right;
+	font-style:italic;
+}
+article.k3-4 figure {
+	border-right:12px solid rgb(255,255,255);
+	float:left;
+}
+article.k3-4 img {
+	max-height:80px;
+	border:1px solid rgb(220,220,220);
+}
+article.k3-4 h4 {
+	margin:0;
+	padding:0;
+	color:rgb(0,0,0);
+	border:0;
+	border-bottom:rgb(197,68,37) solid 2px;
+}
+article.k3-4 p.text, article.k3-4 p.intro {
+	margin-left:0;
+	color:rgb(0,0,0);
+}
+article.k3-4:after {
+	content:" ";
+	clear:both;
+	display:block;
+}
+/*
+==================================================
+==================================================
+	3 MAIN
+		3.4 LITERATUR (Übersicht)
+			3.4.1 LITERATUR-Detail
+--------------------------------------------------
+*/
+p.k3-4-1_autor {
+	margin-top:-6px;
+	font-style:italic;
+	font-size:12px;
+	line-height:14px;
+	text-align:right;
+	float:right;
+}
+p.k3-4-1_subtitel {
+	margin:3px 12px 14px 12px;
+	font-weight:bold;
+	text-align:left;
+	max-width:520px;
+}
+figure.k3-4-1_cover {
+	padding:5px 0 14px 30px;
+	float:right;
+	background-color:white;
+}
+img.k3-4-1_cover {
+	max-width:400px;
+	border:1px solid rgb(220,220,220);
+	border-radius:3px;
+}
+figcaption.k3-4-1_auflage {
+	color:rgb(120,120,120);
+	font-family:Georgia, Times New Roman, serif;
+	text-align:right;
+}
+ul.k3-4-1_liste {
+	margin:14px 12px 14px 12px;
+	list-style:disc inside;
+}
+ul.k3-4-1_footer {
+	text-align:right;
+	clear:both;
+}
+p.k3-4-1_preis {
+	margin-top:10px;
+	font-weight:bold;
+}
+p.k3-4-1_verlag {
+	margin-top:10px;
+	color:rgb(120,120,120);
+	font-family:Georgia, Times New Roman, serif;
+}
+/*
+==================================================
+==================================================
+	3 MAIN
+		3.5 LINKS
+--------------------------------------------------
+*/
+a.k3-5 {
+	white-space:normal;
+}
+article.k3-5 {
+	margin:20px 0px 40px 0px;
+	padding:12px;
+	border:2px solid rgb(220,220,220);
+	border-radius:3px;
+}
+article.k3-5 img {
+	padding:0px;
+	max-height:20px;
+	float:left;
+}
+article.k3-5 h4 {
+	margin:0;
+	padding:0;
+	color:rgb(0,0,0);
+	border:0;
+	border-bottom:rgb(197,68,37) solid 2px;
+}
+article.k3-5 p.text, article.k3-5 p.intro {
+	margin-left:0;
+	color:rgb(0,0,0);
+}
+article.k3-5:after {
+	content:" ";
+	clear:both;
+	display:block;
+}
+/*
+==================================================
+==================================================
+	3 MAIN
+		3.6 COMMUNITY (innerhalb von MAIN)
+--------------------------------------------------
+*/
+/*
+==================================================
+==================================================
+	3 MAIN
+		3.6 COMMUNITY (innerhalb von MAIN)
+			3.6.1 Registrierung
+--------------------------------------------------
+*/
+fieldset.k3-6-1 label {
+	display:block;
+}
+/*
+==================================================
+==================================================
+	3 MAIN
+		3.6 COMMUNITY (innerhalb von MAIN)
+			3.6.2 Meine Startseite
+--------------------------------------------------
+*/
+/*
+==================================================
+==================================================
+	3 MAIN
+		3.6 COMMUNITY (innerhalb von MAIN)
+			3.6.3 Persönliche Daten
+--------------------------------------------------
+*/
+/*
+==================================================
+==================================================
+	3 MAIN
+		3.6 COMMUNITY (innerhalb von MAIN)
+			3.6.4 Einstellungen
+--------------------------------------------------
+*/
+/*
+==================================================
+==================================================
+	3 MAIN
+		3.6 COMMUNITY (innerhalb von MAIN)
+			3.6.5 Passwort vergessen
+--------------------------------------------------
+*/
+fieldset.k3-6-5 label {
+	display:block;
+}
+/*
+==================================================
+==================================================
+	3 MAIN
+		3.6 COMMUNITY (innerhalb von MAIN)
+			3.6.6 "nach Logout"
+--------------------------------------------------
+*/
+/*
+==================================================
+==================================================
+	4 ASIDE
+--------------------------------------------------
+*/
+aside.k4 {
+	padding:0 0 0 30px;
+	text-align:left;
+	width:240px;
+	float:right;
+}
+aside.k4 article, aside.k4 nav, aside.k4 section {
+	margin:20px 0px 30px 0px;
+	background-color:rgb(240,240,240);
+	border:rgb(220,220,220) solid 2px;
+	border-top:0;
+	border-radius:5px;
+}
+aside.k4 h3 {
+	padding:10px 0px 10px 10px;
+	font-weight:bold;
+	font-size:18px;
+	line-height:22px;
+	border-top:rgb(197,68,37) solid 2px;
+	border-bottom:rgb(220,220,220) solid 2px;
+	border-radius:3px;
+}
+aside.k4 h4 {
+	margin:10px;
+	font-weight:bold;
+	line-height:17px;
+	text-align:left;
+}
+p.aside {
+	text-align:left;
+	margin:10px;
+}
+/*
+==================================================
+==================================================
+	4 ASIDE
+		4.1 COMMUNITY (innerhalb von ASIDE)
+--------------------------------------------------
+*/
+/*
+==================================================
+==================================================
+	4 ASIDE
+		4.1 COMMUNITY (innerhalb von ASIDE)
+			4.1.1 LOGIN
+--------------------------------------------------
+*/
+section.k4-1-1 a {
+	float:right;
+}
+form.k4-1-1 {
+	margin:10px;
+	padding:10px 10px 5px 10px;
+	background-color:rgb(230,230,230);
+	text-align:left;
+	border:rgb(220,220,220) solid 2px;
+	border-radius:5px;
+}
+input.k4-1-1_textfeld {
+	margin-bottom:5px;
+	width:186px;
+}
+input.k4-1-1_button {
+	margin-top:10px;
+}
+a.k4-1-1_forgotpw {
+	margin-top:20px;
+	font-size:10px;
+	line-height:12px;
+}
+/*
+==================================================
+==================================================
+	4 ASIDE
+		4.1 COMMUNITY (innerhalb von ASIDE)
+			4.1.2 MENÜ
+--------------------------------------------------
+*/
+ul.k4-1-2 a {
+	padding:5px 20px 5px 20px;
+	background-color:rgb(230,230,230);
+	text-align:left;
+	border-top:rgb(220,220,220) solid 2px;
+	display:block;	
+}
+ul.k4-1-2 a.k4-1-2_firstbutton {
+	border-top:0;
+}
+ul.k4-1-2 a.k4-1-2_lastbutton {
+	border-bottom-right-radius:3px;
+	border-bottom-left-radius:3px;
+}
+ul.k4-1-2 li:hover a {
+	color:rgb(240,240,240);
+	background-color:rgb(197,68,37);
+}
+/*
+==================================================
+==================================================
+	4 ASIDE
+		4.2 WERBUNG
+--------------------------------------------------
+*/
+article.k4-2 img, article.k4-2 script {
+	margin:20px 0px 15px 0px;
+}
+/*
+==================================================
+==================================================
+	4 ASIDE
+		4.2 WERBUNG
+			4.2.1 KINDERNOTHILFE
+--------------------------------------------------
+*/
+/*
+==================================================
+==================================================
+	4 ASIDE
+		4.2 WERBUNG
+			4.2.2 OUTDOOR-CLIMBING.DE
+--------------------------------------------------
+*/
+/*
+==================================================
+==================================================
+	4 ASIDE
+		4.2 WERBUNG
+			4.2.3 GOOGLE ADSENSE
+--------------------------------------------------
+*/
+/*
+==================================================
+==================================================
+	5 FOOTER
+--------------------------------------------------
+*/
+footer.k5 {
+	margin-bottom:25px;
+	clear:both;
+}
+/*
+==================================================
+==================================================
+	5 FOOTER
+		5.1 FUSSNAVIGATION
+--------------------------------------------------
+*/
+ul.k5-1 li {
+	background-color:rgb(220,220,220);
+	border-right:1px solid rgb(160,160,160);
+	width:210px;
+	float:left;
+}
+ul.k5-1 li a {
+	padding:5px 20px 5px 20px;
+	display:block;
+	transition:background 0.2s ease-out 0s;
+}
+ul.k5-1 li:hover a{
+	color:rgb(240,240,240);
+	background-color:rgb(197,68,37);
+}
+ul.k5-1 li.k5-1_lastbutton {
+	border-right:0px none transparent;
+	width:317px;
+}
+ul.k5-1 li.k5-1_lastbutton a {
+	text-align:right;
+}
+/*
+--------------------------------------------------
+ENDE ENDE ENDE ENDE ENDE ENDE ENDE ENDE ENDE ENDE 
+==================================================
+==================================================
+*/
