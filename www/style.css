@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+:root {
+  --primary: hsl(102, 54%, 41%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* PAGE STRUCTURE */
+
+html {
+  font-family: sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+/* CARDS */
+
+.card {
+  width: 18rem;
+  height: 18rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2.4rem;
+  border: 6px solid var(--primary);
+}
