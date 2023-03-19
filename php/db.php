@@ -13,10 +13,10 @@ class DB {
     }
   }
 
-  public static function getFavorites() {
+  public static function getLinks() {
     try {
       $pdo = DB::connect();
-      $query = 'SELECT * FROM favorites;';
+      $query = 'SELECT * FROM links;';
       $statement = $pdo->prepare($query);
       $statement->execute();
       $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
