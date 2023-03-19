@@ -29,14 +29,18 @@ function links_to_html(array $links): string {
       strlen($link['color']) > 0
         ? ' style="border-color:' . $link['color'] . '"'
         : '';
+    $name =
+      strlen($link['image']) > 0
+        ? '<img src="images/' . $link['image'] . '">'
+        : $link['name'];
     $html_link =
       '<a href="' .
       $link['url'] .
       '" target="_blank" rel="noopener noreferrer"><div class="card"' .
       $style .
-      '><span>' .
-      $link['name'] .
-      '</span></div></a>';
+      '>' .
+      $name .
+      '</div></a>';
     return $html_link;
   };
   return join(array_map($link_to_html, $links));
