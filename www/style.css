@@ -42,12 +42,13 @@ img {
 /* CARDS */
 
 .card {
-  width: 18rem;
-  height: 18rem;
+  width: 12rem;
+  height: 12rem;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 1.6rem;
-  border: 0.6rem solid var(--primary);
+  border: 0.5rem solid var(--primary);
+  border-radius: 10%;
 }
