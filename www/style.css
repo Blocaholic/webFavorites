@@ -44,6 +44,12 @@ a {
   color: #222;
 }
 
+code {
+  font-family: monospace;
+  font-weight: normal;
+  color: #444;
+}
+
 /* CARDS */
 
 .card {
