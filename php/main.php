@@ -14,7 +14,11 @@ function main() {
   foreach ($categories as $category) {
     $html_category = links_to_html(filter_category($links, $category));
     $html_content .=
-      '<h2>' . $category . '</h2><section>' . $html_category . '</section>';
+      '<article><h2>' .
+      $category .
+      '</h2><section>' .
+      $html_category .
+      '</section></article>';
   }
 
   // FINAL PAGE
