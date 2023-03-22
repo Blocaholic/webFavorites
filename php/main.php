@@ -2,25 +2,30 @@
 include_once 'db.php';
 
 function main() {
-  // PRODUCTION
+  // GET DATA AND TEMPLATES
   $links = DB::getLinks();
   $categories = array_unique(array_column($links, 'category'));
+  $html_template = file_get_contents('../templates/index.html');
 
-  // DEVELOP
+  // FAVORITES
   $html_content = '';
+
+  // CATEGORIES
   foreach ($categories as $category) {
-    $html_category = links_to_html(
-      array_filter($links, function (array $link) use ($category): bool {
-        return $link['category'] == $category;
-      })
-    );
+    $html_category = links_to_html(filter_category($links, $category));
     $html_content .=
       '<h2>' . $category . '</h2><section>' . $html_category . '</section>';
   }
 
-  $html_template = file_get_contents('../templates/index.html');
+  // FINAL PAGE
   $html = preg_replace('/\[\%content\%\]/', $html_content, $html_template);
   return $html;
+}
+
+function filter_category(array $links, string $category): array {
+  return array_filter($links, function (array $link) use ($category): bool {
+    return $link['category'] == $category;
+  });
 }
 
 function links_to_html(array $links): string {
