@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      src: url('./Inter-VariableFont_slnt\,wght.ttf');
+    }
+
+    * {
+      font-family: 'Inter';
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    button {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Viewport Size</h1>
+  <p>Width: <span id="width"></span></p>
+  <p>Height: <span id="height"></span></p>
+  <button id="button">Show</button>
+  <script>
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    document.getElementById('button').addEventListener('click', _ => {
+      document.getElementById('width').innerText = vw;
+      document.getElementById('height').innerText = vh;
+    });
+  </script>
+</body>
+</html>
